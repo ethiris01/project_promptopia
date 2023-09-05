@@ -1,4 +1,4 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 // db models
 import User from "@models/user";
@@ -24,10 +24,9 @@ const handler = NextAuth({
       return session;
     },
 
-    async signIn({ profile }) {
+    async signIn({ account, profile, user, credentials }) {
       try {
         // serverless => lambda => dynamodb
-
         // check if a user already exists
         await connectToDB();
         const userExists = await User.findOne({
@@ -44,7 +43,7 @@ const handler = NextAuth({
         }
         return true;
       } catch (error) {
-        console.log(error);
+        console.log("Error checking if user exists: ", error.message);
         return false;
       }
     },
