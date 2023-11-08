@@ -1,5 +1,6 @@
 
-![Screenshot 2023-11-08 194253](https://github.com/ethiris01/project_promptopia/assets/130985778/f3ba201e-1294-467a-8a7d-2d91aa0408d5)
+![github_img](https://github.com/ethiris01/project_promptopia/assets/130985778/66a208ae-bc3e-4171-accb-657304760108)
+
 
 
 
